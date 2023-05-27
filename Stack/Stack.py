@@ -1,22 +1,21 @@
-import test
+class Stack:
+    def __init__(self):
+        self.top=[]
 
-odd= test.Stack()
-even= test.Stack()
-for i in range(10):
-    if i%2==0:
-        even.push(i)
-    else:
-        odd.push(i)
-'''print("스택 even push 5회:",even)
-print("스택 odd push 5회:",odd)
-print("스택 even    peek:",odd.peek())
-print("스택 odd     peek:",odd.peek())
+    def isEmpty(self):
+        return len(self.top) ==0
+    def size(self):
+        return len(self.top)
+    def clear(self):
+        self.top=[]
 
-for _ in range(2):
-    even.pop()
-for _ in range(3):
-    odd.pop()
+    def push(self,item):
+        self.top.append(item)
 
-print("스택 even push 2회:",even)
-print("스택 odd push 3회:",odd)
-'''
+    def pop (self):
+        if not self.isEmpty():
+            return self.top.pop(-1)
+
+    def peek(self):
+        if not self.isEmpty():
+            return self.top[-1]

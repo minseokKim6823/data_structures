@@ -1,23 +1,13 @@
-class Stack:
-    def __init__(self):
-        self.top = []
+import Stack as st
 
-    def isEmpty(self):
-        return len(self.top) == 0
+odd=st.Stack()
+even=st.Stack()
 
-    def size(self):
-        return len(self.top)
-
-    def clear(self):
-        self.top = []
-
-    def push(self, item):
-        self.top.append(item)
-
-    def pop(self):
-        if not self.isEmpty():
-            return self.top.pop(-1)
-
-    def peek(self):
-        if not self.isEmpty():
-            return self.top[-1]
+for i in range(10):
+    if i%2==0:
+        even.push(i)
+    else:
+        odd.push(i)
+print('스택 even push 5회:',even.t)
+print('스택 odd push 5회:',odd.t)
+print(odd)
